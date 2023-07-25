@@ -1,0 +1,108 @@
+/* Importar a fonte Ubunto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+/* Criar variáveis */
+:root{
+    --color1: #203740;
+    --color-2: #A3B7BF;
+    --color3:#34BFB1;
+    --color4: #F2B138 ;
+    --color5: #F29E38;
+    --color6:#1F3540;
+}
+body {
+    background-color: var(--color1);
+    font-family: "Ubuntu", sans-serif;
+    
+}
+.body-of-game{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25rem;
+    height: 80vh;
+  
+    display: flex;
+    flex-direction: column;
+}
+i{
+    box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.4) !important; /* Sombra */
+}
+.card{
+    background-color:     #162a35;
+    color: var(--color3);
+    width: 5.5rem;
+    height: 4.5rem;
+    border: none;    
+    box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.4) !important; /* Sombra */
+}
+.card-res {
+    background-color: #F2B138;
+    color: var(--color1);
+    width: 5.5rem;
+    height: 3rem;
+
+   
+
+}
+.card-text{
+    flex: 1;
+    font-size: 45px;
+}
+.text-res{
+    flex: 1;
+    font-size: 20px !important;
+    color: var(--color1);
+
+}
+.xo{
+    width: 30px;
+    height: 30px;
+    font-weight: 600;
+    font-size: 20px;
+
+
+}
+.x{
+    width: 30px;
+    height: 30px;
+    color: var(--color3);
+    position: relative;
+    
+    font-weight: bolder;
+
+}
+.x::before, .x::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    background-color: var(--color3);    
+    font-weight: bolder;
+    color: black;
+
+}
+.x:before{
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+.x:after{
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+.o{
+    position: relative;
+    border: 6px solid var(--color4);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: #34BFB1;    
+}
+
+.desabilitar{
+pointer-events: none;
+}
+.abilitar{
+    pointer-events: all;
+}
